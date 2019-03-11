@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DetailsMovie from './DetailsMovie';
 import Navbar from './../navbar/Navbar';
 import { popular } from './../../constants/ApiUrls';
 import MovieList from './../MovieList';
@@ -53,12 +52,7 @@ class FrontpageMovies extends Component {
           <div className='media'>
             <h1 className='title'>Películas Populares</h1>
             <div className='results flex results_poster_card'>
-            {console.log(data)}
-              {data.map(item => (
-                <div className='item poster card' key={ item.title }>
-                  <DetailsMovie movie={ item } />
-                </div>
-              ))}
+              <MovieList movie={ data } />
             </div>
           </div>
         </div>
